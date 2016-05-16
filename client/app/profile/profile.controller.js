@@ -6,9 +6,9 @@ class ProfileController {
     var scope = this;
     User.find({username:$stateParams.username}, function(user) {
       scope.user = user;
-    })
+    });
   }
-};
+}
 
 angular.module('meanApp')
   .controller('ProfileController', ProfileController);
