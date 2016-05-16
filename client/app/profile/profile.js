@@ -4,8 +4,8 @@ angular.module('meanApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('profile', {
-        url: '/profile',
-        template: '<profile></profile>',
-        authenticate: 'user'
+        url: '/:username',
+        templateUrl: 'app/profile/profile.html',
+        controller: 'ProfileController'
       });
   });

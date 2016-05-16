@@ -608,7 +608,8 @@ module.exports = function (grunt) {
         files: {
           '<%= yeoman.client %>/index.html': [
                [
-                 '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).js',
+                 '<%= yeoman.client %>/{app,components}/**/!(profile|*.spec|*.mock).js',
+                 '<%= yeoman.client %>/app/profile/!(*.spec).js',
                  '!{.tmp,<%= yeoman.client %>}/app/app.{js,ts}'
                ]
             ]

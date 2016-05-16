@@ -1,16 +1,16 @@
 'use strict';
 (function(){
 
-class ProfileComponent {
-  constructor() {
-    this.message = 'Hello';
+class ProfileController {
+  constructor(User, $stateParams) {
+    var scope = this;
+    User.find({username:$stateParams.username}, function(user) {
+      scope.user = user;
+    })
   }
 }
 
 angular.module('meanApp')
-  .component('profile', {
-    templateUrl: 'app/profile/profile.html',
-    controller: ProfileComponent
-  });
+  .controller('ProfileController', ProfileController);
 
 })();
