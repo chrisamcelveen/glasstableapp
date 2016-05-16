@@ -23,7 +23,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  $light-green: #CCF5AC;
 
  $primary-color: $medium-green;
- $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ $sans-serif: 'proxima-nova', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
  $browser-context: 16; // Default
 
@@ -88,16 +88,13 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'account/account.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';
 /* endinject */
-
-.center {
-  text-align: center;
-}
 
 body {
   font-size: rem(16);
@@ -115,9 +112,23 @@ a {
   color: $primary-color;
   &:hover {
     text-decoration: underline;
+    color: $dark-green;
+    cursor: pointer;
   }
 }
 
 button {
   @include button($primary-color);
+}
+
+label {
+  font-size: 12px;
+}
+
+.center {
+  text-align: center;
+}
+
+.small-text {
+  font-size: em(24);
 }
