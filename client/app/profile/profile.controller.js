@@ -8,7 +8,7 @@ class ProfileController {
       scope.user = user;
     })
   }
-}
+};
 
 angular.module('meanApp')
   .controller('ProfileController', ProfileController);
