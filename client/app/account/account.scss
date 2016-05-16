@@ -1,6 +1,12 @@
 .sign-up {
 	text-align: center;
+<<<<<<< HEAD
 	.form {
+=======
+	margin: 40px 0 20px;
+	.form {
+		margin: 60px 0 30px;
+>>>>>>> sign-up-page
 		text-align: left;
 	}
 }
@@ -9,7 +15,38 @@
 	margin-right: em(32);
 }
 
+<<<<<<< HEAD
 .form-radio {
 	display: block;
 	width: 100%;
+=======
+.radio-group {
+	.row {
+		margin-left: 8px;
+		margin-top: 10px;
+	}
+}
+
+.label-radio {
+	//display: inline-block;
+	padding-right: 20px;
+	font-weight: 400;
+	float: left;
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+.form-state {
+	padding-left: 0;
+}
+
+.form-zip {
+	padding-right: 0;
+}
+
+.form-end {
+	margin-top: 20px;
+>>>>>>> sign-up-page
 }
