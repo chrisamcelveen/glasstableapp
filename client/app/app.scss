@@ -11,9 +11,12 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
  $white: rgba(255,255,255,1.00);
  $black: rgba(0,0,0,1.00);
+ $darkest-gray: #333;
+ $dark-gray: #666;
  $gray: rgba(204,204,204,1.00);
  $light-gray: #999;
  $lightest-gray: #F5F5F5;
+
 
  $dark-green: #4AAD52;
  $medium-green: #8ED081;
@@ -75,10 +78,19 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   padding: 0.2em 0;
 }
 
+.form-control {
+  border-radius: none;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
 // Component styles are injected through grunt
 /* inject:scss */
 @import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'messaging/messaging.scss';
 @import 'profile/profile.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
@@ -95,6 +107,17 @@ body {
   font-family: $sans-serif;
   color: $black;
   background-color: $white;
+}
+
+h1, h2, h3, h4, p {
+  font-family: $sans-serif;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 button {
