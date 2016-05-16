@@ -4,7 +4,13 @@
 
 #banner {
   border-bottom: none;
+  height: 44em;
+  @include flexbox;
+  align-items: center;
+  justify-content: center;
   margin-top: -20px;
+  background: url("../assets/images/header.jpeg") no-repeat center center;
+  @include background-size(cover);
 }
 
 #banner h1 {
@@ -16,7 +22,7 @@
 .hero-unit {
   position: relative;
   padding: 30px 15px;
-  color: #F5F5F5;
+  color: $lightest-gray;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: #4393B9;
@@ -24,4 +30,60 @@
 
 .navbar-text {
   margin-left: 15px;
+}
+
+#btn-head {
+  padding: 12px 20px;
+  text-align: center;
+  background: transparent;
+  border: solid 3px $white;
+  color: $white;
+  font-size: 16px;
+  transition: 0.5s ease all;
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $black;
+  }
+}
+
+.statement {
+  padding: em(40);
+  background-color: $lightest-gray;
+  min-height: em(300);
+  @include flexbox;
+  align-items: center;
+  display-items: center;
+  h1, h2, h3, h4, p {
+    font-size: rem(48);
+    text-align: center;
+  }
+}
+
+.information-img {
+  img {
+    max-width: 100%;
+  }
+}
+
+.information-copy {
+  @include flexbox;
+  align-items: center;
+  min-height: 600px;
+  padding: 60px;
+  p {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+.product-information {
+  .row {
+    margin: rem(40) 0;
+    padding: rem(40);
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
 }

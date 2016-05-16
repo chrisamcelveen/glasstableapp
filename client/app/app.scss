@@ -3,15 +3,75 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import '../bower_components/bootstrap-social/bootstrap-social.scss';
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 /**
  * App-wide Styles
  */
 
+ $white: rgba(255,255,255,1.00);
+ $black: rgba(0,0,0,1.00);
+ $gray: rgba(204,204,204,1.00);
+ $light-gray: #999;
+ $lightest-gray: #F5F5F5;
+
+ $dark-green: #4AAD52;
+ $medium-green: #8ED081;
+ $light-green: #CCF5AC;
+
+ $primary-color: $medium-green;
+ $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+ $browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+ @mixin background-size($value) {
+   -webkit-background-size: $value;
+   -moz-background-size: $value;
+   -o-background-size: $value;
+   background-size: $value;
+ }
+
+ @mixin button($color) {
+	background-color: $color;
+	border: 1px solid mix($black, $color, 25%);
+	border-radius: 5px;
+	padding: .25em .5em;
+
+	&:hover {
+		cursor: pointer;
+		background-color: mix($black, $color, 15%);
+		border-color: mix($black, $color, 40%);
+	}
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+  background: $gray;
+  color: $black;
   padding: 0.2em 0;
 }
 
@@ -23,3 +83,19 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';
 /* endinject */
+
+.center {
+  text-align: center;
+}
+
+body {
+  font-size: rem(16);
+  line-height: 1.3;
+  font-family: $sans-serif;
+  color: $black;
+  background-color: $white;
+}
+
+button {
+  @include button($primary-color);
+}
