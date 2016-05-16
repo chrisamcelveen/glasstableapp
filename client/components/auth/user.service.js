@@ -17,6 +17,10 @@ function UserResource($resource) {
       params: {
         id: 'me'
       }
+    },
+    find: {
+      method: 'GET',
+      url: '/api/users/:username'
     }
   });
 }

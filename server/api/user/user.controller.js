@@ -52,16 +52,16 @@ export function create(req, res, next) {
  * Get a single user
  */
 export function show(req, res, next) {
-  var userId = req.params.id;
-
-  return User.findById(userId).exec()
-    .then(user => {
+  User.findOne({username:req.params.username})
+    .then(function(user) {
       if (!user) {
         return res.status(404).end();
       }
       res.json(user.profile);
     })
-    .catch(err => next(err));
+    .catch(function(err) {
+      return next(err);
+    })
 }
 
 /**
