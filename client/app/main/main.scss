@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   margin-top: -20px;
-  background: url("../assets/images/header.jpeg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url("../assets/images/header.jpg") no-repeat center center;
   @include background-size(cover);
 }
 
@@ -69,10 +69,10 @@
 .information-copy {
   @include flexbox;
   align-items: center;
-  min-height: 600px;
+  min-height: em(400);
   padding: 60px;
   p {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.5;
   }
 }
@@ -85,5 +85,19 @@
       margin-top: 0;
       padding-top: 0;
     }
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
+}
+
+.signup-cta {
+  background-color: $dark-green;
+  color: $white;
+  height: em(80);
+  @include flexbox();
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
