@@ -18,3 +18,5 @@ angular.module('meanApp', [
 
     $locationProvider.html5Mode(true);
   });
+
+

@@ -14,3 +14,4 @@ angular.module('meanApp')
   .controller('ProfileController', ProfileController);
 
 })();
+
