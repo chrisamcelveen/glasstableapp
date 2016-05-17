@@ -5,7 +5,10 @@ New Profile Page
 .profile-sidebar {
   float: left;
   width: 300px;
+  min-height: 100vh;
+  padding-top: 30px;
   margin-right: 20px;
+  background-color: $lightest-gray;
 }
 
 .profile-content {
@@ -33,14 +36,14 @@ New Profile Page
 	margin-top: 20px; 
 }
 
-.profile-usertitle-name {
+.profile-business-name {
 	color: #5a7391;
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 7px;
 }
 
-.profile-usertitle-job {
+.profile-user-city {
 	text-transform: uppercase;
 	color: #5b9bd1;
 	font-size: 13px;
@@ -165,3 +168,101 @@ New Profile Page
     overflow: visible;
   }
 }
+
+.feeds {
+	list-style-type: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		padding: 16px;
+		font-size: 18px;
+		position: relative;
+		&:nth-child(even){
+			background-color: $lightest-gray;
+		}
+
+		.provider {
+			float: left;
+		}
+		.provider-data {
+			float: right;
+		}
+		.verified {
+			margin: 0 20px;
+			color: $black;
+		}
+		.fa-star {
+			color: #FFCC00;
+			margin: 0 10px;
+		}
+	}
+
+
+	.profile-link {
+		margin-left: auto;
+	}
+}
+
+
+
+.profile-bio {
+	font-size: 16px;
+	padding: 0 40px 40px;
+}
+
+
+.profile-contact-name,
+.profile-address {
+	margin-bottom: 20px;
+}
+
+.profile-intro {
+	margin: 40px 0;
+}
+
+.profile-intro-bio {
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	min-height: 160px;
+}
+
+.circle-chart {
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-weight: bold;
+
+	.circle {
+		font-size: 30px;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		@include flexbox();
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		background-color: $primary-color;
+		margin-bottom: 10px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
