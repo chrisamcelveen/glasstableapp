@@ -8,3 +8,5 @@ angular.module('meanApp')
         template: '<main></main>'
       });
   });
+
+angular.module('meanApp', ['mailchimp']);
